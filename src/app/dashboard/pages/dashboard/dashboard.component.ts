@@ -5,10 +5,6 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './dashboard.component.html',
   styles: [
     `
-    .dashboard-card {
-      max-width: 100%;
-      margin: 10px 10px;
-    }
     `
   ]
 })

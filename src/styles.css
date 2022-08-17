@@ -2,3 +2,16 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 1 rem = 10px */
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.container {
+  width: min(90%, 120rem);
+  margin: 0 auto;
+}
