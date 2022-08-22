@@ -12,33 +12,54 @@
 
     <mat-form-field appearance="standard">
       <mat-label>Filter</mat-label>
-      <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
+      <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Michael" #input>
     </mat-form-field>
 
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
-      <!-- Position Column -->
+      <!-- User Column -->
       <ng-container matColumnDef="user">
         <th mat-header-cell *matHeaderCellDef> User </th>
         <td mat-cell *matCellDef="let element"> {{ element.user | titlecase }} </td>
       </ng-container>
 
-      <!-- Name Column -->
+      <!-- FirstName Column -->
       <ng-container matColumnDef="firstName">
         <th mat-header-cell *matHeaderCellDef> First Name </th>
         <td mat-cell *matCellDef="let element"> {{ element.firstName }} </td>
       </ng-container>
 
-      <!-- Weight Column -->
+      <!-- LastName Column -->
       <ng-container matColumnDef="lastName">
         <th mat-header-cell *matHeaderCellDef> Last Name </th>
         <td mat-cell *matCellDef="let element"> {{ element.lastName }} </td>
       </ng-container>
 
-      <!-- Symbol Column -->
+      <!-- Gender Column -->
       <ng-container matColumnDef="gender">
         <th mat-header-cell *matHeaderCellDef> Gender </th>
         <td mat-cell *matCellDef="let element"> {{ element.gender }} </td>
+      </ng-container>
+
+       <!-- Action Column -->
+       <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef>Action</th>
+        <td mat-cell *matCellDef="let element">
+          <mat-icon aria-hidden="false"
+                    aria-label="Edit"
+                    fontIcon="edit"
+                    color="primary"
+                    matTooltip="Edit user">
+            edit
+          </mat-icon>
+          <mat-icon aria-hidden="false"
+                    aria-label="Delete"
+                    fontIcon="delete"
+                    color="warn"
+                    matTooltip="Delete user">
+            delete
+          </mat-icon>
+        </td>
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
@@ -46,7 +67,7 @@
 
       <!-- Row shown when there is no matching data. -->
       <tr class="mat-row" *matNoDataRow>
-        <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+        <td class="mat-cell" colspan="4">No data matching the filter "{{ input.value }}"</td>
       </tr>
     </table>
 

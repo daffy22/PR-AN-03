@@ -1,20 +1,8 @@
-import { AfterViewInit, Component, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { User } from '../../interfaces/user';
-
-const ELEMENT_DATA: User[] = [
-  { user: 'migges', firstName: 'Luis', lastName: 'Estrada', gender: 'Male' },
-  { user: 'jpez', firstName: 'Juan', lastName: 'Castillo', gender: 'Male' },
-  { user: 'laFee', firstName: 'Cuto', lastName: 'Guadalupe', gender: 'Male' },
-  { user: 'casoCerrado', firstName: 'Dra.', lastName: 'Polo', gender: 'Female' },
-  { user: 'Yolanda', firstName: 'Donde', lastName: 'Estas', gender: 'Female' },
-  { user: 'frnaCDVT', firstName: 'Franco', lastName: 'Devita', gender: 'Male' },
-  { user: 'jroge46', firstName: 'Jorge', lastName: 'Lozano', gender: 'Male' },
-  { user: 'mrdb', firstName: 'Maria', lastName: 'Deniz', gender: 'Female' },
-  { user: 'kennyS', firstName: 'Kenny', lastName: 'Schrub', gender: 'Male' },
-  { user: 'fallen', firstName: 'Niid', lastName: 'ea', gender: 'Male' },
-];
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-users',
@@ -39,14 +27,23 @@ const ELEMENT_DATA: User[] = [
     `
   ]
 })
-export class UsersComponent implements AfterViewInit {
+export class UsersComponent implements OnInit,AfterViewInit {
 
-  displayedColumns: string[] = ['user', 'firstName', 'lastName', 'gender'];
-  dataSource = new MatTableDataSource(ELEMENT_DATA);
+  displayedColumns: string[] = ['user', 'firstName', 'lastName', 'gender', 'action'];
+
+  get users() {
+    return this.userService.getUsers;
+  }
+
+  dataSource = new MatTableDataSource(this.users);
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
-  constructor() { }
+  constructor(private userService: UserService) {
+  }
+
+  ngOnInit(): void {
+  }
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;

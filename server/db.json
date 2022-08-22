@@ -1,0 +1,14 @@
+{
+  "users": [
+    { "user": "migges", "firstName": "Luis", "lastName": "Estrada", "gender": "Male" },
+    { "user": "jpez", "firstName": "Juan", "lastName": "Castillo", "gender": "Male" },
+    { "user": "laFee", "firstName": "Cuto", "lastName": "Guadalupe", "gender": "Male" },
+    { "user": "casoCerrado", "firstName": "Dra.", "lastName": "Polo", "gender": "Female" },
+    { "user": "Yolanda", "firstName": "Donde", "lastName": "Estas", "gender": "Female" },
+    { "user": "frnaCDVT", "firstName": "Franco", "lastName": "Devita", "gender": "Male" },
+    { "user": "jroge46", "firstName": "Jorge", "lastName": "Lozano", "gender": "Male" },
+    { "user": "mrdb", "firstName": "Maria", "lastName": "Deniz", "gender": "Female" },
+    { "user": "kennyS", "firstName": "Kenny", "lastName": "Schrub", "gender": "Male" },
+    { "user": "fallen", "firstName": "Niid", "lastName": "ea", "gender": "Male" }
+  ]
+}
