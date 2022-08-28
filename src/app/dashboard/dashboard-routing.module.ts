@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+
+import { EditUserComponent } from './pages/edit-user/edit-user.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ReportsComponent } from './pages/reports/reports.component';
@@ -21,6 +23,11 @@ const routes: Routes = [
       {
         path: 'reports',
         component: ReportsComponent
+      },
+      {
+        path: 'users/edit/:id',
+        component: EditUserComponent,
+        pathMatch: 'full'
       },
       {
         path: '**',

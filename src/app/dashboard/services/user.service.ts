@@ -23,4 +23,8 @@ export class UserService {
       })
   }
 
+  getUser( id: string ) {
+    return this.http.get<User>(`${ this._baseUrl }/users/${ id }`);
+  }
+
 }

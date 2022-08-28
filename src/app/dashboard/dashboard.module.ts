@@ -13,16 +13,18 @@ import { ReportsComponent } from './pages/reports/reports.component';
 // Components
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { HomeComponent } from './pages/home/home.component';
+import { EditUserComponent } from './pages/edit-user/edit-user.component';
 
 @NgModule({
   declarations: [
     // Pages
     DashboardComponent,
+    EditUserComponent,
     UsersComponent,
     ReportsComponent,
     // Components
     ToolbarComponent,
-    HomeComponent
+    HomeComponent,
   ],
   imports: [
     CommonModule,

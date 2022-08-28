@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
-import { User } from '../../interfaces/user';
+import { Router } from '@angular/router';
 import { UserService } from '../../services/user.service';
 
 @Component({
@@ -39,7 +39,8 @@ export class UsersComponent implements OnInit,AfterViewInit {
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
-  constructor(private userService: UserService) {
+  constructor( private userService: UserService,
+               private router: Router ) {
   }
 
   ngOnInit(): void {
@@ -52,6 +53,11 @@ export class UsersComponent implements OnInit,AfterViewInit {
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
+
+  editUser( user: any ) {
+    const id: string = user.id;
+    this.router.navigate([`users/edit/${ id }`]);
   }
 
 }
