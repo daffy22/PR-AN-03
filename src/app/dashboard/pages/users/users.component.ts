@@ -56,7 +56,7 @@ export class UsersComponent implements OnInit,AfterViewInit {
   }
 
   editUser( user: any ) {
-    const id: string = user.id;
+  const id: string = user.id;
     this.router.navigate([`users/edit/${ id }`]);
   }
 
