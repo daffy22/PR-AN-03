@@ -1,2 +1,23 @@
-<p>add-user works!</p>
-<p> {{ user | json }}</p>
+<div class="container" style="margin-top: 2rem;">
+
+  <mat-icon aria-hidden="false"
+            aria-label="Arrow back icon"
+            fontIcon="arrow_back"
+            (click)="backTo()"
+            style="margin-bottom: 3rem; cursor: pointer;">
+    arrow_back
+  </mat-icon>
+
+  <div class="grid-two-columns">
+    <div>
+      <app-user-card [user]="user"></app-user-card>
+    </div>
+
+    <div>
+      this is a form
+    </div>
+
+  </div>
+
+</div>
+
