@@ -22,7 +22,6 @@ export class EditUserComponent implements OnInit {
 
   user: User = {
     id: '',
-    profileImg: '',
     backgroundImg: '',
     user: '',
     firstName: '',
@@ -31,11 +30,9 @@ export class EditUserComponent implements OnInit {
   }
 
   myForm: FormGroup = this.fb.group({
-    user: [ , [ Validators.required, Validators.minLength(5) ] ],
     firstName: [ , [ Validators.required ] ],
     lastName: [ , [ Validators.required ] ],
     gender: [ , [ Validators.required ] ],
-    profileImg: [ 'https://ocpcyprus.com/wp-content/uploads/2017/05/no-profile-210x210.jpg' ],
     backgroundImg: [ 'https://ocpcyprus.com/wp-content/uploads/2017/05/no-profile-210x210.jpg' ],
   });
 
@@ -53,12 +50,40 @@ export class EditUserComponent implements OnInit {
       )
       .subscribe( user => {
         this.user = user;
-        console.log(this.user);
-      } );
+        this.myForm.reset({
+          firstName: this.user.firstName,
+          lastName: this.user.lastName,
+          gender: this.user.gender,
+          backgroundImg: this.user.backgroundImg
+        });
+      });
   }
 
   backTo() {
     this.router.navigate(['/users']);
+  }
+
+  editUser() {
+
+    this.user.firstName = this.myForm.value['firstName'];
+    this.user.lastName = this.myForm.value['lastName'];
+    this.user.gender = this.myForm.value['gender'];
+    this.user.backgroundImg = this.myForm.value['backgroundImg'];
+
+    this.myForm.reset({
+      firstName: this.user.firstName,
+      lastName: this.user.lastName,
+      gender: this.user.gender,
+      backgroundImg: this.user.backgroundImg
+    });
+
+    this.userService.patchUser(this.user)
+      .subscribe();
+  }
+
+  fieldNotValid( field: string ) {
+    return this.myForm.controls[field].errors
+        && this.myForm.controls[field].touched;
   }
 
 }

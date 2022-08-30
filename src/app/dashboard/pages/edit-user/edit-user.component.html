@@ -4,7 +4,8 @@
             aria-label="Arrow back icon"
             fontIcon="arrow_back"
             (click)="backTo()"
-            style="margin-bottom: 3rem; cursor: pointer;">
+            style="margin-bottom: 3rem; cursor: pointer;"
+            matTooltip="Back to">
     arrow_back
   </mat-icon>
 
@@ -14,7 +15,40 @@
     </div>
 
     <div>
-      this is a form
+      <form (ngSubmit)="editUser()"
+            autocomplete="off"
+            [formGroup]="myForm"
+            class="grid-two-columns">
+
+        <mat-form-field appearance="fill">
+          <mat-label>FirstName</mat-label>
+          <input matInput formControlName="firstName">
+          <mat-error *ngIf="fieldNotValid('firstName')">This field is required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>LastName</mat-label>
+          <input matInput formControlName="lastName">
+          <mat-error *ngIf="fieldNotValid('lastName')">This field is required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Gender</mat-label>
+          <mat-select formControlName="gender">
+            <mat-option value="Male">Male</mat-option>
+            <mat-option value="Female">Female</mat-option>
+          </mat-select>
+          <mat-error *ngIf="fieldNotValid('gender')">This field is required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>BackgroundImgUrl</mat-label>
+          <input matInput formControlName="backgroundImg">
+        </mat-form-field>
+
+
+        <button mat-raised-button color="primary" type="submit" style="height: 5.35rem;">SAVE</button>
+      </form>
     </div>
 
   </div>

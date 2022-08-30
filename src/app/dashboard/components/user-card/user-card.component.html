@@ -4,14 +4,13 @@
     <mat-card-title>{{ user.firstName | uppercase }} - {{ user.user | lowercase }}</mat-card-title>
     <mat-card-subtitle>{{ user.lastName }}</mat-card-subtitle>
   </mat-card-header>
-  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+  <img mat-card-image [src]="user.backgroundImg | backgroundImage" alt="Profile image of {{ user.firstName }}">
   <mat-card-content>
     <p>
       {{ user.gender }}
     </p>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-button (click)="backTo()">CANCEL</button>
-    <button mat-button>SAVE</button>
+    <button mat-raised-button color="warn" (click)="backTo()">CANCEL</button>
   </mat-card-actions>
 </mat-card>
