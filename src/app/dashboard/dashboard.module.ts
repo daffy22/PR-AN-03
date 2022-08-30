@@ -16,6 +16,7 @@ import { ReportsComponent } from './pages/reports/reports.component';
 // Components
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { UserCardComponent } from './components/user-card/user-card.component';
+import { BackgroundImagePipe } from './pipes/background-image.pipe';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,8 @@ import { UserCardComponent } from './components/user-card/user-card.component';
     // Components
     ToolbarComponent,
     UserCardComponent,
+    //Pipes
+    BackgroundImagePipe,
   ],
   imports: [
     CommonModule,

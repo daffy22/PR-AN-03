@@ -1,14 +1,79 @@
 {
   "users": [
-    { "id": "1", "user": "migges", "firstName": "Luis", "lastName": "Estrada", "gender": "Male" },
-    { "id": "2", "user": "jpez", "firstName": "Juan", "lastName": "Castillo", "gender": "Male" },
-    { "id": "3", "user": "laFee", "firstName": "Cuto", "lastName": "Guadalupe", "gender": "Male" },
-    { "id": "4", "user": "casoCerrado", "firstName": "Dra.", "lastName": "Polo", "gender": "Female" },
-    { "id": "5", "user": "Yolanda", "firstName": "Donde", "lastName": "Estas", "gender": "Female" },
-    { "id": "6", "user": "frnaCDVT", "firstName": "Franco", "lastName": "Devita", "gender": "Male" },
-    { "id": "7", "user": "jroge46", "firstName": "Jorge", "lastName": "Lozano", "gender": "Male" },
-    { "id": "8", "user": "mrdb", "firstName": "Maria", "lastName": "Deniz", "gender": "Female" },
-    { "id": "9", "user": "kennyS", "firstName": "Kenny", "lastName": "Schrub", "gender": "Male" },
-    { "id": "10", "user": "fallen", "firstName": "Niid", "lastName": "ea", "gender": "Male" }
+    {
+      "id": "1",
+      "user": "migges",
+      "firstName": "Luis",
+      "lastName": "Estrada Fernandez",
+      "gender": "Male",
+      "backgroundImg": "https://www.cinemascomics.com/wp-content/uploads/2020/09/batman-1939-original.jpg.webp",
+      "profileImg": "https://www.cinemascomics.com/wp-content/uploads/2020/09/batman-1939-original.jpg.webp"
+    },
+    {
+      "id": "2",
+      "user": "jpez",
+      "firstName": "Juan",
+      "lastName": "Castillo",
+      "gender": "Male",
+      "backgroundImg": "https://eloutput.com/app/uploads-eloutput.com/2022/01/superman.jpg",
+      "profileImg": "https://www.cinemascomics.com/wp-content/uploads/2020/09/batman-1939-original.jpg.webp"
+    },
+    {
+      "id": "3",
+      "user": "laFee",
+      "firstName": "Cuto",
+      "lastName": "Guadalupe",
+      "gender": "Male"
+    },
+    {
+      "id": "4",
+      "user": "casoCerrado",
+      "firstName": "Dra.",
+      "lastName": "Polo",
+      "gender": "Female"
+    },
+    {
+      "id": "5",
+      "user": "Yolanda",
+      "firstName": "Florencio ",
+      "lastName": "Sanchidrián",
+      "gender": "Male",
+      "backgroundImg": "http://2.bp.blogspot.com/-KsqmnrSBD1Q/TW1blbQxLVI/AAAAAAAAAWM/LWJJZY648sc/s400/101_1968.JPG"
+    },
+    {
+      "id": "6",
+      "user": "frnaCDVT",
+      "firstName": "Franco",
+      "lastName": "Devita",
+      "gender": "Male"
+    },
+    {
+      "id": "7",
+      "user": "jroge46",
+      "firstName": "Jorge",
+      "lastName": "Lozano",
+      "gender": "Male"
+    },
+    {
+      "id": "8",
+      "user": "mrdb",
+      "firstName": "Maria",
+      "lastName": "Deniz",
+      "gender": "Female"
+    },
+    {
+      "id": "9",
+      "user": "kennyS",
+      "firstName": "Kenny",
+      "lastName": "Schrub",
+      "gender": "Male"
+    },
+    {
+      "id": "10",
+      "user": "fallen",
+      "firstName": "Niid",
+      "lastName": "ea",
+      "gender": "Male"
+    }
   ]
 }

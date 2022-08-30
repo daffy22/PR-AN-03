@@ -22,7 +22,6 @@ export class EditUserComponent implements OnInit {
 
   user: User = {
     id: '',
-    profileImg: '',
     backgroundImg: '',
     user: '',
     firstName: '',
@@ -34,7 +33,6 @@ export class EditUserComponent implements OnInit {
     firstName: [ , [ Validators.required ] ],
     lastName: [ , [ Validators.required ] ],
     gender: [ , [ Validators.required ] ],
-    profileImg: [ 'https://ocpcyprus.com/wp-content/uploads/2017/05/no-profile-210x210.jpg' ],
     backgroundImg: [ 'https://ocpcyprus.com/wp-content/uploads/2017/05/no-profile-210x210.jpg' ],
   });
 
@@ -55,7 +53,8 @@ export class EditUserComponent implements OnInit {
         this.myForm.reset({
           firstName: this.user.firstName,
           lastName: this.user.lastName,
-          gender: this.user.gender
+          gender: this.user.gender,
+          backgroundImg: this.user.backgroundImg
         });
       });
   }
@@ -65,12 +64,21 @@ export class EditUserComponent implements OnInit {
   }
 
   editUser() {
-    console.log('form working!');
+
+    this.user.firstName = this.myForm.value['firstName'];
+    this.user.lastName = this.myForm.value['lastName'];
+    this.user.gender = this.myForm.value['gender'];
+    this.user.backgroundImg = this.myForm.value['backgroundImg'];
+
     this.myForm.reset({
       firstName: this.user.firstName,
       lastName: this.user.lastName,
-      gender: this.user.gender
+      gender: this.user.gender,
+      backgroundImg: this.user.backgroundImg
     });
+
+    this.userService.patchUser(this.user)
+      .subscribe();
   }
 
   fieldNotValid( field: string ) {

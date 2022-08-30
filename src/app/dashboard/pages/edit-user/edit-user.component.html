@@ -4,7 +4,8 @@
             aria-label="Arrow back icon"
             fontIcon="arrow_back"
             (click)="backTo()"
-            style="margin-bottom: 3rem; cursor: pointer;">
+            style="margin-bottom: 3rem; cursor: pointer;"
+            matTooltip="Back to">
     arrow_back
   </mat-icon>
 
@@ -33,22 +34,20 @@
 
         <mat-form-field appearance="fill">
           <mat-label>Gender</mat-label>
-          <input matInput formControlName="gender">
+          <mat-select formControlName="gender">
+            <mat-option value="Male">Male</mat-option>
+            <mat-option value="Female">Female</mat-option>
+          </mat-select>
           <mat-error *ngIf="fieldNotValid('gender')">This field is required</mat-error>
         </mat-form-field>
 
         <mat-form-field appearance="fill">
-          <mat-label>ProfileImg</mat-label>
-          <input matInput formControlName="profileImg">
-        </mat-form-field>
-
-        <mat-form-field appearance="fill">
-          <mat-label>BackgroundImg</mat-label>
+          <mat-label>BackgroundImgUrl</mat-label>
           <input matInput formControlName="backgroundImg">
         </mat-form-field>
 
 
-        <button mat-button type="submit">SAVE</button>
+        <button mat-raised-button color="primary" type="submit" style="height: 5.35rem;">SAVE</button>
       </form>
     </div>
 
