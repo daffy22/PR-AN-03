@@ -31,7 +31,6 @@ export class EditUserComponent implements OnInit {
   }
 
   myForm: FormGroup = this.fb.group({
-    user: [ , [ Validators.required, Validators.minLength(5) ] ],
     firstName: [ , [ Validators.required ] ],
     lastName: [ , [ Validators.required ] ],
     gender: [ , [ Validators.required ] ],
@@ -53,12 +52,30 @@ export class EditUserComponent implements OnInit {
       )
       .subscribe( user => {
         this.user = user;
-        console.log(this.user);
-      } );
+        this.myForm.reset({
+          firstName: this.user.firstName,
+          lastName: this.user.lastName,
+          gender: this.user.gender
+        });
+      });
   }
 
   backTo() {
     this.router.navigate(['/users']);
+  }
+
+  editUser() {
+    console.log('form working!');
+    this.myForm.reset({
+      firstName: this.user.firstName,
+      lastName: this.user.lastName,
+      gender: this.user.gender
+    });
+  }
+
+  fieldNotValid( field: string ) {
+    return this.myForm.controls[field].errors
+        && this.myForm.controls[field].touched;
   }
 
 }
