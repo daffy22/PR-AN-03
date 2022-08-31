@@ -1,8 +1,11 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
-import { MatPaginator } from '@angular/material/paginator';
-import { MatTableDataSource } from '@angular/material/table';
+import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from '../../services/user.service';
+import { DeleteUserComponent } from '../../components/dialogs/delete-user/delete-user.component';
+import { MatDialog } from '@angular/material/dialog';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
+
 
 @Component({
   selector: 'app-users',
@@ -27,7 +30,7 @@ import { UserService } from '../../services/user.service';
     `
   ]
 })
-export class UsersComponent implements OnInit,AfterViewInit {
+export class UsersComponent implements AfterViewInit {
 
   displayedColumns: string[] = ['user', 'firstName', 'lastName', 'gender', 'action'];
 
@@ -40,10 +43,8 @@ export class UsersComponent implements OnInit,AfterViewInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
   constructor( private userService: UserService,
-               private router: Router ) {
-  }
-
-  ngOnInit(): void {
+               private router: Router,
+               public dialog: MatDialog ) {
   }
 
   ngAfterViewInit() {
@@ -60,4 +61,12 @@ export class UsersComponent implements OnInit,AfterViewInit {
     this.router.navigate([`users/edit/${ id }`]);
   }
 
+  openDeleteDialog( user: any ) {
+    this.dialog.open(DeleteUserComponent, {
+      width: '25rem',
+      data: {
+        user
+      }
+    });
+  }
 }

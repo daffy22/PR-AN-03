@@ -32,4 +32,7 @@ export class UserService {
     return this.http.patch<User>(`${ this._baseUrl }/users/${ id }`, user);
   }
 
+  deleteUser( id: string ) {
+    return this.http.delete<User>(`${ this._baseUrl }/users/${ id }`);
+  }
 }

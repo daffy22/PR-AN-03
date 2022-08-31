@@ -10,42 +10,12 @@
       "profileImg": "https://www.cinemascomics.com/wp-content/uploads/2020/09/batman-1939-original.jpg.webp"
     },
     {
-      "id": "2",
-      "user": "jpez",
-      "firstName": "Juan",
-      "lastName": "Castillo",
-      "gender": "Male",
-      "backgroundImg": "https://eloutput.com/app/uploads-eloutput.com/2022/01/superman.jpg",
-      "profileImg": "https://www.cinemascomics.com/wp-content/uploads/2020/09/batman-1939-original.jpg.webp"
-    },
-    {
-      "id": "3",
-      "user": "laFee",
-      "firstName": "Cuto",
-      "lastName": "Guadalupe",
-      "gender": "Male"
-    },
-    {
-      "id": "4",
-      "user": "casoCerrado",
-      "firstName": "Dra.",
-      "lastName": "Polo",
-      "gender": "Female"
-    },
-    {
       "id": "5",
       "user": "Yolanda",
       "firstName": "Florencio ",
       "lastName": "Sanchidrián",
       "gender": "Male",
       "backgroundImg": "http://2.bp.blogspot.com/-KsqmnrSBD1Q/TW1blbQxLVI/AAAAAAAAAWM/LWJJZY648sc/s400/101_1968.JPG"
-    },
-    {
-      "id": "6",
-      "user": "frnaCDVT",
-      "firstName": "Franco",
-      "lastName": "Devita",
-      "gender": "Male"
     },
     {
       "id": "7",
@@ -60,13 +30,6 @@
       "firstName": "Maria",
       "lastName": "Deniz",
       "gender": "Female"
-    },
-    {
-      "id": "9",
-      "user": "kennyS",
-      "firstName": "Kenny",
-      "lastName": "Schrub",
-      "gender": "Male"
     },
     {
       "id": "10",
