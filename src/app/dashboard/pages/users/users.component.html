@@ -3,7 +3,7 @@
     <mat-card-header>
       <div class="header">
         <span>Users</span>
-        <span><button mat-raised-button color="primary">ADD</button></span>
+        <span><button mat-raised-button color="primary" matTooltip="Add new user" (click)="openNewUserDialog()">ADD</button></span>
       </div>
     </mat-card-header>
   </mat-card>
@@ -72,9 +72,7 @@
           <td class="mat-cell" colspan="4">No data matching the filter "{{ input.value }}"</td>
         </tr>
       </table>
-
       </ng-container>
-
 
     <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
   </div>
@@ -83,7 +81,4 @@
     <mat-progress-spinner></mat-progress-spinner>
   </ng-template>
 
-
 </ng-container>
-
-
