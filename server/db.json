@@ -10,14 +10,6 @@
       "profileImg": "https://www.cinemascomics.com/wp-content/uploads/2020/09/batman-1939-original.jpg.webp"
     },
     {
-      "id": "5",
-      "user": "Yolanda",
-      "firstName": "Florencio ",
-      "lastName": "Sanchidrián",
-      "gender": "Male",
-      "backgroundImg": "http://2.bp.blogspot.com/-KsqmnrSBD1Q/TW1blbQxLVI/AAAAAAAAAWM/LWJJZY648sc/s400/101_1968.JPG"
-    },
-    {
       "id": "7",
       "user": "jroge46",
       "firstName": "Jorge",
@@ -36,6 +28,14 @@
       "user": "fallen",
       "firstName": "Niid",
       "lastName": "ea",
+      "gender": "Male"
+    },
+    {
+      "id": "UU2RSib",
+      "backgroundImg": "https://ocpcyprus.com/wp-content/uploads/2017/05/no-profile-210x210.jpg",
+      "user": "CutoGuadalupe",
+      "firstName": "Cuto",
+      "lastName": "Guadalupe",
       "gender": "Male"
     }
   ]
