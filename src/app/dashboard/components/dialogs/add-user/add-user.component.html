@@ -1,0 +1,49 @@
+<h1 mat-dialog-title>Create new user</h1>
+<div mat-dialog-content>
+  Would you like to delete this user?
+</div>
+
+<form (ngSubmit)="addUser()"
+      autocomplete="off"
+      [formGroup]="myForm"
+      class="grid-two-columns">
+
+  <mat-form-field appearance="fill">
+    <mat-label>User</mat-label>
+    <input matInput formControlName="user">
+    <mat-error *ngIf="fieldNotValid('user')">This field is required</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>FirstName</mat-label>
+    <input matInput formControlName="firstName">
+    <mat-error *ngIf="fieldNotValid('firstName')">This field is required</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>LastName</mat-label>
+    <input matInput formControlName="lastName">
+    <mat-error *ngIf="fieldNotValid('lastName')">This field is required</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Gender</mat-label>
+    <mat-select formControlName="gender">
+      <mat-option value="Male">Male</mat-option>
+      <mat-option value="Female">Female</mat-option>
+    </mat-select>
+    <mat-error *ngIf="fieldNotValid('gender')">This field is required</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>BackgroundImgUrl</mat-label>
+    <input matInput formControlName="backgroundImg">
+  </mat-form-field>
+
+</form>
+
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>CANCEL</button>
+  <button mat-button mat-dialog-close cdkFocusInitial (click)="addUser()">CREATE</button>
+</div>
+

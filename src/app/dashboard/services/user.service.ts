@@ -23,6 +23,10 @@ export class UserService {
       })
   }
 
+  deleteUser( id: string ) {
+    return this.http.delete<User>(`${ this._baseUrl }/users/${ id }`);
+  }
+
   getUser( id: string ) {
     return this.http.get<User>(`${ this._baseUrl }/users/${ id }`);
   }
@@ -32,7 +36,8 @@ export class UserService {
     return this.http.patch<User>(`${ this._baseUrl }/users/${ id }`, user);
   }
 
-  deleteUser( id: string ) {
-    return this.http.delete<User>(`${ this._baseUrl }/users/${ id }`);
+  postUser( user: User ) {
+    return this.http.post<User>(`${ this._baseUrl }/users`, user);
   }
+
 }

@@ -14,10 +14,13 @@ import { UsersComponent } from './pages/users/users.component';
 import { ReportsComponent } from './pages/reports/reports.component';
 
 // Components
+import { AddUserComponent } from './components/dialogs/add-user/add-user.component';
+import { DeleteUserComponent } from './components/dialogs/delete-user/delete-user.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { UserCardComponent } from './components/user-card/user-card.component';
+
+//Pipes
 import { BackgroundImagePipe } from './pipes/background-image.pipe';
-import { DeleteUserComponent } from './components/dialogs/delete-user/delete-user.component';
 
 @NgModule({
   declarations: [
@@ -28,11 +31,12 @@ import { DeleteUserComponent } from './components/dialogs/delete-user/delete-use
     UsersComponent,
     ReportsComponent,
     // Components
+    AddUserComponent,
+    DeleteUserComponent,
     ToolbarComponent,
     UserCardComponent,
     //Pipes
     BackgroundImagePipe,
-    DeleteUserComponent,
   ],
   imports: [
     CommonModule,

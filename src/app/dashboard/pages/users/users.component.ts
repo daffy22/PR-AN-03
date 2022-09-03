@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from '../../services/user.service';
+import { AddUserComponent } from '../../components/dialogs/add-user/add-user.component';
 import { DeleteUserComponent } from '../../components/dialogs/delete-user/delete-user.component';
 import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
@@ -67,6 +68,12 @@ export class UsersComponent implements AfterViewInit {
       data: {
         user
       }
+    });
+  }
+
+  openNewUserDialog() {
+    this.dialog.open(AddUserComponent, {
+      width: '85rem'
     });
   }
 }
