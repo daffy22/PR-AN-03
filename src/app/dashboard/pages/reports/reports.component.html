@@ -1,7 +1,24 @@
 <ng-container>
   <mat-card class="container" style="margin-top: 2rem">
     <mat-card-header>
-      Reports
+      <mat-card-title>
+        Reports
+      </mat-card-title>
     </mat-card-header>
   </mat-card>
+
+  <div class="container grid-two-columns" style="margin-top: 2rem;">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title style="color: green;">Users: {{ this.length }}+</mat-card-title>
+        <mat-card-subtitle>In the last month</mat-card-subtitle>
+      </mat-card-header>
+    </mat-card>
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title style="color: green;">34%</mat-card-title>
+        <mat-card-subtitle>Increase in sales</mat-card-subtitle>
+      </mat-card-header>
+    </mat-card>
+  </div>
 </ng-container>

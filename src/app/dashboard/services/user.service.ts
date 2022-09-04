@@ -31,6 +31,10 @@ export class UserService {
     return this.http.get<User>(`${ this._baseUrl }/users/${ id }`);
   }
 
+  getUsersLength(): number {
+    return this._users.length;
+  }
+
   patchUser( user: User ) {
     const id = user.id;
     return this.http.patch<User>(`${ this._baseUrl }/users/${ id }`, user);
