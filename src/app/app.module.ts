@@ -6,10 +6,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 
+// Pages
+import { ErrorPageComponent } from './shared/error-page/error-page.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    // Pages
+    ErrorPageComponent
   ],
   imports: [
     AppRoutingModule,

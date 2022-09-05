@@ -13,7 +13,7 @@ const routes: Routes = [
     component: HomeComponent,
     children: [
       {
-        path: 'dashboard',
+        path: '',
         component: DashboardComponent
       },
       {
@@ -31,7 +31,7 @@ const routes: Routes = [
       },
       {
         path: '**',
-        redirectTo: 'dashboard'
+        redirectTo: ''
       }
     ]
   }
