@@ -6,6 +6,12 @@ import { AuthService } from '../../services/auth.service';
   selector: 'app-login',
   templateUrl: './login.component.html',
   styles: [
+    `
+    .flex-one-column {
+      display: flex;
+      justify-content: center;
+    }
+    `
   ]
 })
 export class LoginComponent {
@@ -14,15 +20,12 @@ export class LoginComponent {
                private authService: AuthService ) { }
 
   login( ) {
-    // Go to backend
-    // -> an user
     this.authService.login()
       .subscribe( resp => {
         if ( resp.id ) {
           this.router.navigate(['./dashboard']);
         }
       });
-
   }
 
 }

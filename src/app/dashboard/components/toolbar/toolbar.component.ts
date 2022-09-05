@@ -34,7 +34,7 @@ import { User } from '../../interfaces/user';
     `
   ]
 })
-export class ToolbarComponent implements OnInit {
+export class ToolbarComponent {
 
   get auth() {
     return this.authService.auth;
@@ -42,10 +42,6 @@ export class ToolbarComponent implements OnInit {
 
   constructor( private router: Router,
                private authService: AuthService ) { }
-
-  ngOnInit(): void {
-
-  }
 
   logout() {
     this.authService.logout();

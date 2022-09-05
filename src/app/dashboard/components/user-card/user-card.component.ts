@@ -18,14 +18,11 @@ import { User } from '../../interfaces/user';
     `
   ]
 })
-export class UserCardComponent implements OnInit {
+export class UserCardComponent {
 
   @Input() user!: User;
 
   constructor(private router: Router) { }
-
-  ngOnInit(): void {
-  }
 
   backTo() {
     this.router.navigate(['/users']);
